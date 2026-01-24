@@ -121,38 +121,21 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script type="text/javascript">
-        // --- MUSIC PLAYER SETUP ---
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '1',
-                width: '1',
-                videoId: 'AGsn2ycFRqI', // UPDATED: Pehli Nazar Mein
-                playerVars: {
-                    'autoplay': 1,
-                    'controls': 0,
-                    'loop': 1,
-                    'playlist': 'AGsn2ycFRqI', // Required for loop to work
-                    'playsinline': 1,
-                    'origin': window.location.origin
-                },
-                events: {
-                    'onReady': function (e) {
-                        e.target.playVideo(); // Try to autoplay on load
-                    }
-                }
-            });
+               // --- MUSIC PLAYER SETUP ---
+        // Using local audio file to prevent ads
+        var player = document.getElementById('player');
+
+        // Attempt to play on any interaction
+        function enableAudio() {
+            if (player && player.paused) {
+                player.play().catch(e => console.log("Audio play interaction needed"));
+            }
         }
 
-        // UNMUTE/PLAY ON FIRST CLICK (Fix for mobile blocking autoplay)
-        window.addEventListener('click', function () {
-            if (player && typeof player.playVideo === 'function') {
-                player.playVideo();
-                player.unMute();
-                player.setVolume(100);
-            }
-        }, { once: true });
-
+        // Listen for user interaction (click, touch, or key)
+        window.addEventListener('click', enableAudio);
+        window.addEventListener('touchstart', enableAudio);
+        window.addEventListener('keydown', enableAudio);
 
         // --- EXISTING ANIMATION CODE ---
         var offsetX = $("#loveHeart").width() / 2;
