@@ -32,9 +32,11 @@
 </head>
 
 <body>
-       <audio id="player" autoplay loop>
+    <audio id="player" autoplay loop>
         <source src="music.mp3" type="audio/mp3">
     </audio>
+
+    <button id="goBackBtn" onclick="history.back()">Go Back</button>
 
     <div id="mainDiv">
         <div id="content">
@@ -123,7 +125,7 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script type="text/javascript">
-               // --- MUSIC PLAYER SETUP ---
+        // --- MUSIC PLAYER SETUP ---
         // Using local audio file to prevent ads
         var player = document.getElementById('player');
 
