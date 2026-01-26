@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 body {
@@ -32,9 +32,12 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allows clicks to pass through to content */
-    z-index: 9999; /* Ensure it's above all other content */
-    background: transparent; /* Make canvas background transparent */
+    pointer-events: none;
+    /* Allows clicks to pass through to content */
+    z-index: 9999;
+    /* Ensure it's above all other content */
+    background: transparent;
+    /* Make canvas background transparent */
 }
 
 /* Existing content should have lower z-index */
@@ -109,7 +112,7 @@ canvas {
     /* height: 187px; */
 }
 
-.box2 p{
+.box2 p {
     margin-top: -15px;
     color: #fff;
     font-weight: 800;
@@ -158,7 +161,8 @@ canvas {
 #code .comments {
     /* color: #cac9c9e0; */
 }
-.oclr  a{
+
+.oclr a {
     color: #d8d8d8;
 }
 
@@ -167,10 +171,21 @@ a {
     text-decoration: none;
 }
 
-.comments { color: #6a9955; }
-.string { color: #ce9178; }
-.keyword { color: #569cd6; }
-.placeholder { padding-left: 20px; }
+.comments {
+    color: #6a9955;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.keyword {
+    color: #569cd6;
+}
+
+.placeholder {
+    padding-left: 20px;
+}
 
 #copyright {
     margin-top: 20px;
@@ -192,4 +207,30 @@ a {
     color: #c9c6c6
 }
 
+/* Styles for the Go Back button */
+#goBackBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ffb7c5;
+    /* Light pinkish */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    /* Pill shape */
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 10000;
+    /* Above everything */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
 
+#goBackBtn:hover {
+    transform: translateX(-50%) scale(1.05);
+    background-color: #ff9eb0;
+}
