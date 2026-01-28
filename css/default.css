@@ -6,14 +6,16 @@ body {
     padding: 0;
     height: 98vh;
     width: 100vw;
-    background: linear-gradient(to right, rgb(7, 7, 7), rgb(12, 12, 12)), url("../img/heartbg.png");
+    /* Soft cream-to-sage transition */
+    background: linear-gradient(135deg, #fdfbf7 0%, #e8f3e8 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-size: 12px;
     overflow-x: hidden;
     font-family: "Inter", serif;
-    color: #fff !important;
+    color: #4b5563 !important;
+    /* Gray-600 */
 }
 
 #words {
@@ -61,7 +63,7 @@ canvas {
     width: 670px;
     height: 620px;
     position: relative;
-    backdrop-filter: blur(20px);
+    /* Glass Card effect REMOVED to match original layout */
 }
 
 #garden {
@@ -73,14 +75,17 @@ canvas {
     text-align: right;
     font-size: 18px;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    color: #5e6e5b;
+    /* Deep Rose/Muted Green */
 }
 
 #words {
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #f5a0a0;
+    color: #5e6e5b;
+    /* Headings and Accent Text */
 }
 
 #messages {
@@ -88,7 +93,8 @@ canvas {
 }
 
 .clr {
-    color: #ddf2ff;
+    color: #5e6e5b;
+    /* Deep Rose/Muted Green */
 }
 
 #elapseClock .digit {
@@ -110,16 +116,19 @@ canvas {
     left: 52%;
     transform: translateX(-50%);
     /* height: 187px; */
+    color: #5e6e5b;
 }
 
 .box2 p {
     margin-top: -15px;
-    color: #fff;
+    color: #5e6e5b;
+    /* Updated to match theme */
     font-weight: 800;
 }
 
 .box3 p {
     margin-top: -15px;
+    color: #5e6e5b;
 }
 
 #loveu .signature {
@@ -136,17 +145,22 @@ canvas {
     width: 440px;
     margin-top: 40px !important;
     height: 400px;
-    color: #d8d8d8;
+    margin-top: 40px !important;
+    height: 400px;
+    color: #6b7280;
+    /* Body Text: Gray */
     font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
     font-size: 14px;
 }
 
 #code .string {
-    /* color: #ffb500; */
+    color: #d4af37;
+    /* Warm Gold */
 }
 
 #code .keyword {
-    /* color: #b91db2; */
+    color: #435041;
+    /* Deep Rose/Muted Green - Darkened for contrast */
     font-weight: bold;
 }
 
@@ -159,28 +173,33 @@ canvas {
 }
 
 #code .comments {
-    /* color: #cac9c9e0; */
+    color: #aebdca;
+    /* Sage Accent */
 }
 
 .oclr a {
-    color: #d8d8d8;
+    color: #5e6e5b;
 }
 
 a {
-    color: #6a9955;
+    color: #5e6e5b;
+    /* Deep Rose/Muted Green */
     text-decoration: none;
 }
 
 .comments {
-    color: #6a9955;
+    color: #aebdca;
+    /* Sage Accent */
 }
 
 .string {
-    color: #ce9178;
+    color: #d4af37;
+    /* Warm Gold */
 }
 
 .keyword {
-    color: #569cd6;
+    color: #5e6e5b;
+    /* Deep Rose/Muted Green */
 }
 
 .placeholder {
@@ -214,8 +233,8 @@ a {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: #ffb7c5;
-    /* Light pinkish */
+    background: linear-gradient(to right, #a5d6a7, #80cbc4);
+    /* Final Button Gradient: light green to teal */
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -227,10 +246,10 @@ a {
     z-index: 10000;
     /* Above everything */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background 0.2s;
 }
 
 #goBackBtn:hover {
     transform: translateX(-50%) scale(1.05);
-    background-color: #ff9eb0;
+    background: linear-gradient(to right, #80cbc4, #a5d6a7);
 }
