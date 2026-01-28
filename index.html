@@ -28,7 +28,7 @@
     <script type="text/javascript" src="js/garden.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script src="https://kit.fontawesome.com/2e95d79f91.js" crossorigin="anonymous"></script>
-    <title>Hapyy Birthday Swarali | Aoudumber Bade</title>
+    <title>Hapyy Birthday Shhreyaaa | rahul__shirol</title>
 </head>
 
 <body>
@@ -197,7 +197,9 @@
                     y: -(Math.random() * 5 + 12) // Faster initial velocity
                 };
                 this.alpha = 1;
-                this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                // Pastel palette
+                const colors = ['#a5d6a7', '#fff9c4', '#ffffff', '#e8f3e8', '#f4ece4', '#d4af37'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
                 this.particles = [];
                 this.exploded = false;
             }
@@ -228,7 +230,7 @@
 
             explode() {
                 this.exploded = true;
-                const baseHue = Math.random() * 360;
+                const colors = ['#a5d6a7', '#fff9c4', '#ffffff', '#e8f3e8', '#f4ece4', '#d4af37'];
                 const particleCount = 150 + Math.random() * 50;
 
                 // Create explosion particles
@@ -239,7 +241,7 @@
                     this.particles.push(new Particle(
                         this.x,
                         this.y,
-                        `hsla(${baseHue + (Math.random() * 20 - 10)}, 100%, 70%, 0.8)`,
+                        colors[Math.floor(Math.random() * colors.length)],
                         {
                             x: Math.cos(angle) * speed + (Math.random() - 0.5),
                             y: Math.sin(angle) * speed + (Math.random() - 0.5)
